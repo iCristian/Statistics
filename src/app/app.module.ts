@@ -10,6 +10,7 @@ import { BinomialPage } from '../pages/binomial/binomial';
 import { PoissonPage } from '../pages/poisson/poisson';
 import { HipergeometricaPage } from '../pages/hipergeometrica/hipergeometrica';
 import { ExponencialPage } from '../pages/exponencial/exponencial';
+import { NormalPage } from '../pages/normal/normal';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ExponencialPage } from '../pages/exponencial/exponencial';
     PoissonPage,
     ExponencialPage,
     HipergeometricaPage,
+    NormalPage,
     MathJaxDirective
   ],
   imports: [
@@ -33,6 +35,7 @@ import { ExponencialPage } from '../pages/exponencial/exponencial';
     PoissonPage,
     BinomialPage,
     HipergeometricaPage,
+    NormalPage,
     ExponencialPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]

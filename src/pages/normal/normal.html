@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Distribución Normal</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-item item-divider color="primary">
+      Definición
+    </ion-item>
+
+    <ion-card-content [MathJax]="def_text" style="text-align: justify;">
+      {{def_text}}
+    </ion-card-content>
+
+    <ion-item item-divider color="primary">
+      Parámetros
+    </ion-item>
+      <ion-card-content [MathJax]="par_text" style="text-align: justify;"> 
+        {{par_text}}
+      </ion-card-content>
+
+  <form [formGroup]="prueba" (submit)="exponencialCalc()" validate>
+
+    <ion-item item-divider color="primary">
+        Calcular Distribución Exponencial
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked [MathJax]="text6" style="text-align: justify;">{{ text6 }}</ion-label>
+      <ion-input formControlName="media" type="text" [(ngModel)]="media" name="media"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked [MathJax]="text7" style="text-align: justify;">{{ text7 }}</ion-label>
+      <ion-input formControlName="desvest" type="text" [(ngModel)]="desvest" name="desvest"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked [MathJax]="text8" style="text-align: justify;">{{ text8 }}</ion-label>
+      <ion-input formControlName="x" type="text" [(ngModel)]="x" name="x"></ion-input>
+    </ion-item>
+    
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <button ion-button full type="submit">Calcular</button>
+        </ion-col>
+        <ion-col>
+          <button ion-button full color="danger" type="reset" (click)="reset()">Borrar</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </form>
+
+  <ion-item item-divider color="primary" *ngIf="visible" >
+    Resultados
+  </ion-item>
+  <ion-card-content *ngIf="visible" [MathJax]="res_text" style="text-align: justify;">
+    {{res_text}}
+    <p>&nbsp;</p>
+  </ion-card-content>
+
+  <p style="text-align: center; color: grey;"><small>&copy; 2017 | Universidad de Playa Ancha de Ciencias de la Educación</small></p>
+
+</ion-content>
