@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Distr. de Bernoulli</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-item item-divider color="primary">
+      Definición
+    </ion-item>
+
+    <ion-card-content [MathJax]="def_text" style="text-align: justify;">
+      {{def_text}}
+    </ion-card-content>
+
+    <ion-item item-divider color="primary">
+      Parámetros
+    </ion-item>
+      <ion-card-content [MathJax]="par_text" style="text-align: justify;"> 
+        {{par_text}}
+      </ion-card-content>
+    <ion-item item-divider color="primary">
+        Devolución
+    </ion-item>
+    <ion-card-content [MathJax]="dev_text" style="text-align: justify;">
+        {{dev_text}}
+    </ion-card-content>
+
+  <form [formGroup]="prueba" (submit)="bernoulliCalc()" validate>
+    <ion-item>
+      <ion-label stacked>Probabilidad de Éxito</ion-label>
+      <ion-input formControlName="p" type="text" placeholder="Valor entre 0 y 1 inclusive" [(ngModel)]="p" name="p"></ion-input>
+    </ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <button ion-button full type="submit">Calcular</button>
+        </ion-col>
+        <ion-col>
+          <button ion-button full color="danger" type="reset" (click)="reset()">Borrar</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </form>
+
+  <ion-item item-divider color="primary" *ngIf="visible" >
+    Resultados
+  </ion-item>
+  <ion-card-content *ngIf="visible" [MathJax]="res_text" style="text-align: justify;">
+    {{res_text}}
+    <p>&nbsp;</p>
+  </ion-card-content>
+
+  <p style="text-align: center; color: grey;"><small>&copy; 2017 | Universidad de Playa Ancha de Ciencias de la Educación</small></p>
+
+</ion-content>
