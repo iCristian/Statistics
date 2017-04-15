@@ -6,7 +6,7 @@ import * as stat from "simple-statistics";
 import * as math from "mathjs";
 
 @Component({
-  selector: 'bernoulli',
+  selector: 'page-bernoulli',
   templateUrl: 'bernoulli.html'
 })
 export class Bernoulli {
@@ -15,7 +15,6 @@ export class Bernoulli {
   //public formulae : String ;
   public def_text : String ;
   public par_text: String;
-  public dev_text: String;
   public res_text: String;
   public visible: Boolean;
 
@@ -26,8 +25,7 @@ export class Bernoulli {
 
     //this.formulae="`sum_(i=1)^n i^3=((n(n+1))/2)^2`";
     this.def_text="<p>La distribución Bernoulli, cuyo nombre se debe al científico Suizo Jakob Bernoulli, es un modelo de probabilidad para una variable aleatoria discreta y de característica dicotómica.</p><p>Es una distribución basal para la distribución Binomial. Caracteriza experimentos que pueden ser asociados al experimento de lanzar una moneda, en la cual hay solo dos opciones posibles. Para la determinación de probabilidades en un punto x, ya sea distribución o cuantía, es necesario especificar un parámetro, que denominaremos p y que representa la probabilidad de éxito o de obtención del resultado de interés en un experimento dicotómico. En este contexto se dirá que la variable aleatoria de estudio se distribuye Bernoulli de parámetro $p$.</p><p style='text-align: center;'>$X \\sim  Ber(p)$</p>";
-    this.par_text = "El valor de $p$ representa una probabilidad, por tanto es un valor entre $0$ y $1$, ambos incluidos.";
-    this.dev_text = "Valor de la distribución para éxito $p$ y fracaso $q$ ";
+    this.par_text = "$p$: Representa una probabilidad de éxito, por tanto es un valor entre $0$ y $1$, ambos incluidos.";
   }
 
   bernoulliCalc(){

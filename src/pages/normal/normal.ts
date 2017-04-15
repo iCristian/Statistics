@@ -31,9 +31,9 @@ export class NormalPage {
     var text3 = "<p style='text-align: center;'> $ f(x) = \\frac{1}{\\sqrt{2\\pi}}e^\\frac{Z^2}{2} $ &nbsp;&nbsp; ; &nbsp;&nbsp; $-\\infty \\leqslant Z \\leqslant \\infty$</p>";
     var text4 = "<p>Para $P(X \\leq x) = P(Z \\leq z) = \\phi(z)$ en donde:</p>";
     var text5 = "<p style='text-align: center;'>$Z = \\frac{x - \\bar{x}}{\\sigma}$</p>"
-    var text5 = "<p style='text-align: center;'>$\\phi(z) = \\frac{1}{\\sqrt{2\\pi}}\\int_{-\\infty }^{z}e^{\\frac{-t^2}{2}}dt$</p>"
+    var text51 = "<p style='text-align: center;'>$\\phi(z) = \\frac{1}{\\sqrt{2\\pi}}\\int_{-\\infty }^{z}e^{\\frac{-t^2}{2}}dt$</p>"
 
-    this.def_text = text1 + text2 + text3 + text4 + text5;
+    this.def_text = text1 + text2 + text3 + text4 + text5 + text51;
     //`p(X = r) = \binom{n}{r}p^{r}(1-p)^{n-r}`//
     this.text6 = "<p>$\\bar{x}$: Media de la distribución </p>";
     var text6 = "<p>$\\bar{x}$: Media de la distribución </p>";

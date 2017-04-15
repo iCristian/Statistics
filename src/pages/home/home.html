@@ -1,13 +1,103 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="home-navbar">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Distr. de Probabilidad</ion-title>
+
+    <ion-title>
+      <img src="assets/imgs/simplEstat.png" height="46px" style="display:inline-block;" width="auto"/>
+    </ion-title>
+
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  
 
+  <ion-grid>
+    <ion-row>
+
+      <ion-col col-50>
+        <ion-card (click)="bernoulli()">
+          <img src="assets/imgs/bernoulli.jpg">
+          <ion-item-group>
+            <ion-item class="card-title" color="home-cardTitle">
+              <h2>Distribución de Bernoulli</h2>
+              <p text-wrap>Generalización de la distribución de Bernoulli para n evenetos dicotómicos.</p>
+            </ion-item>
+          </ion-item-group>
+        </ion-card>
+      </ion-col>
+
+      <ion-col col-50>
+        <ion-card>
+          <img src="assets/imgs/binomial.png">
+          <ion-item-group>
+            <ion-item class="card-title" color="home-cardTitle">
+              <h2>Distribución Binomial</h2>
+              <p text-wrap>Modelo de probabilidad para una variable discreta de característica dicotómica.</p>
+            </ion-item>
+          </ion-item-group>
+        </ion-card>
+      </ion-col>
+
+    </ion-row>
+
+    <ion-row>
+
+      <ion-col col-50>
+        <ion-card>
+          <img src="assets/imgs/bernoulli.jpg">
+          <ion-item-group>
+            <ion-item class="card-title" color="home-cardTitle">
+              <h2>Distribución de Bernoulli</h2>
+              <p text-wrap>Modelo de probabilidad para una variable discreta de característica dicotómica.</p>
+            </ion-item>
+          </ion-item-group>
+        </ion-card>
+      </ion-col>
+
+      <ion-col col-50>
+        <ion-card>
+          <img src="assets/imgs/bernoulli.jpg">
+          <ion-item-group>
+            <ion-item class="card-title" color="home-cardTitle">
+              <h2>Distribución de Bernoulli</h2>
+              <p text-wrap>Modelo de probabilidad para una variable discreta de característica dicotómica.</p>
+            </ion-item>
+          </ion-item-group>
+        </ion-card>
+      </ion-col>
+
+    </ion-row>
+
+    <ion-row>
+
+      <ion-col col-50>
+        <ion-card>
+          <img src="assets/imgs/bernoulli.jpg">
+          <ion-item-group>
+            <ion-item class="card-title" color="home-cardTitle">
+              <h2>Distribución de Bernoulli</h2>
+              <p text-wrap>Modelo de probabilidad para una variable discreta de característica dicotómica.</p>
+            </ion-item>
+          </ion-item-group>
+        </ion-card>
+      </ion-col>
+
+      <ion-col col-50>
+        <ion-card>
+          <img src="assets/imgs/bernoulli.jpg">
+          <ion-item-group>
+            <ion-item class="card-title" color="home-cardTitle">
+              <h2>Distribución de Bernoulli</h2>
+              <p text-wrap>Modelo de probabilidad para una variable discreta de característica dicotómica.</p>
+            </ion-item>
+          </ion-item-group>
+        </ion-card>
+      </ion-col>
+
+    </ion-row>
+
+
+  </ion-grid>
 </ion-content>
