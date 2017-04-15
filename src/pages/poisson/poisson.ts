@@ -32,10 +32,10 @@ export class PoissonPage {
 
     this.def_text = text1 + text2 + text3 + text4 + text5;
     //`p(X = r) = \binom{n}{r}p^{r}(1-p)^{n-r}`//
-    this.text6 = "<p>$\\lambda$</p>";
-    var text6 = "<p>$\\lambda$</p>";
-    this.text7 = "<p>$x$</p>";
-    var text7 = "<p>$x$</p>";
+    this.text6 = "<p>$\\lambda = np$</p>";
+    var text6 = "<p>$\\lambda = np$</p>";
+    this.text7 = "<p>$x$: Prob. de que éxito en $n$ pruebas</p>";
+    var text7 = "<p>$x$: Prob. de que éxito en $n$ pruebas</p>";
 
     this.par_text = text6 + text7;
   }

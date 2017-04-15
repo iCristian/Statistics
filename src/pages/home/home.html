@@ -8,15 +8,19 @@
       <img src="assets/imgs/simplEstat.png" height="46px" style="display:inline-block;" width="auto"/>
     </ion-title>
 
+    <ion-buttons end>
+      <button ion-button (click)="creditos()">
+        <ion-icon name="information-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-
   <ion-grid>
     <ion-row>
-
-      <ion-col col-50>
+      <ion-col>
         <ion-card (click)="bernoulli()">
           <img src="assets/imgs/bernoulli.jpg">
           <ion-item-group>
@@ -27,9 +31,10 @@
           </ion-item-group>
         </ion-card>
       </ion-col>
-
-      <ion-col col-50>
-        <ion-card>
+  </ion-row>
+  <ion-row>
+      <ion-col>
+        <ion-card (click)="binomial()">
           <img src="assets/imgs/binomial.png">
           <ion-item-group>
             <ion-item class="card-title" color="home-cardTitle">
@@ -39,65 +44,59 @@
           </ion-item-group>
         </ion-card>
       </ion-col>
-
-    </ion-row>
-
-    <ion-row>
-
-      <ion-col col-50>
-        <ion-card>
-          <img src="assets/imgs/bernoulli.jpg">
+  </ion-row>
+  <ion-row>
+      <ion-col>
+        <ion-card (click)="poisson()">
+          <img src="assets/imgs/poisson.png">
           <ion-item-group>
             <ion-item class="card-title" color="home-cardTitle">
-              <h2>Distribución de Bernoulli</h2>
-              <p text-wrap>Modelo de probabilidad para una variable discreta de característica dicotómica.</p>
+              <h2>Distribución Poisson</h2>
+              <p text-wrap>Se suele utilizar cuando el nº de repeticiones "n" es discreta y muy grande.</p>
             </ion-item>
           </ion-item-group>
         </ion-card>
       </ion-col>
-
-      <ion-col col-50>
-        <ion-card>
-          <img src="assets/imgs/bernoulli.jpg">
+  </ion-row>
+  <ion-row>
+      <ion-col>
+        <ion-card (click)="hipergeometrica()">
+          <img src="assets/imgs/hipergeometrica.png">
           <ion-item-group>
             <ion-item class="card-title" color="home-cardTitle">
-              <h2>Distribución de Bernoulli</h2>
-              <p text-wrap>Modelo de probabilidad para una variable discreta de característica dicotómica.</p>
+              <h2>Distribución Hipergeométrica</h2>
+              <p text-wrap>Distribución discreta utilizada en la extracción de muestras sin reemplazo.</p>
             </ion-item>
           </ion-item-group>
         </ion-card>
       </ion-col>
-
-    </ion-row>
-
-    <ion-row>
-
-      <ion-col col-50>
-        <ion-card>
-          <img src="assets/imgs/bernoulli.jpg">
+  </ion-row>
+  <ion-row>
+      <ion-col>
+        <ion-card (click)="normal()">
+          <img src="assets/imgs/normal.png">
           <ion-item-group>
             <ion-item class="card-title" color="home-cardTitle">
-              <h2>Distribución de Bernoulli</h2>
-              <p text-wrap>Modelo de probabilidad para una variable discreta de característica dicotómica.</p>
+              <h2>Distribución Normal</h2>
+              <p text-wrap>Modelo de probabilidad bajo el cual muchos fenómenos se comportan.</p>
             </ion-item>
           </ion-item-group>
         </ion-card>
       </ion-col>
-
-      <ion-col col-50>
-        <ion-card>
-          <img src="assets/imgs/bernoulli.jpg">
+  </ion-row>
+  <ion-row>
+      <ion-col>
+        <ion-card (click)="exponencial()">
+          <img src="assets/imgs/exponencial.png">
           <ion-item-group>
             <ion-item class="card-title" color="home-cardTitle">
-              <h2>Distribución de Bernoulli</h2>
-              <p text-wrap>Modelo de probabilidad para una variable discreta de característica dicotómica.</p>
+              <h2>Distribución Exponencial</h2>
+              <p text-wrap>Modelo de probabilidad asociado comunmente a la teoría de colas.</p>
             </ion-item>
           </ion-item-group>
         </ion-card>
       </ion-col>
-
-    </ion-row>
-
+  </ion-row>
 
   </ion-grid>
 </ion-content>

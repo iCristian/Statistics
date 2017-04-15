@@ -41,7 +41,7 @@ export class BinomialPage {
    
     this.def_text = text1 + text2 + text21 + text22 + text23;
 
-    this.text3 = "<p>$p$: Probabilidad de éxito, por tanto es un valor entre $0$ y $1$, ambos incluidos.</p>";
+    this.text3 = "<p>$p$: Prob. de éxito, valor entre $0$ y $1$, ambos incluidos.</p>";
     this.text4 = "<p>$n$: Tamaño de la muestra.</p>";
     this.text5 = "<p>$x$: Número de éxitos esperados.</p>";
     this.par_text = this.text3 + this.text4 + this.text5;

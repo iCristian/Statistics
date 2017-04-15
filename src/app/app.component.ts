@@ -19,20 +19,28 @@ export class MyApp {
 
   rootPage: any = Home;
 
-  pages: Array<{title: string, component: any}>;
+  pagesDiscretas: Array<{title: string, component: any}>;
+  pagesContinuas: Array<{title: string, component: any}>;
+  pagesInicio: Array<{title: string, component: any}>;
 
   constructor(public platform: Platform) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
-    this.pages = [
-      { title: 'Inicio', component: Home },
+    this.pagesInicio = [
+      { title: 'Inicio', component: Home }
+    ];
+
+    this.pagesDiscretas = [
       { title: 'Bernoulli', component: Bernoulli },
       { title: 'Binomial', component: BinomialPage},
       { title: 'Poisson', component: PoissonPage},
-      { title: 'Hipergeométrica', component: HipergeometricaPage},
-      { title: 'Exponencial', component: ExponencialPage},
-      { title: 'Normal', component: NormalPage}
+      { title: 'Hipergeométrica', component: HipergeometricaPage}
+    ];
+
+    this.pagesContinuas = [
+      { title: 'Normal', component: NormalPage},
+      { title: 'Exponencial', component: ExponencialPage}
     ];
 
   }
