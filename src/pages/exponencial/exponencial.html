@@ -23,7 +23,7 @@
         {{par_text}}
       </ion-card-content>
 
-  <form [formGroup]="prueba" (submit)="exponencialCalc()" validate>
+  <form [formGroup]="prueba" (submit)="exponencialCalc()" novalidate>
 
     <ion-item item-divider color="primary" color="home-cardTitle">
         Calcular Distribución Exponencial
@@ -31,12 +31,12 @@
 
     <ion-item>
       <ion-label stacked [MathJax]="text6" style="text-align: justify;">{{ text6 }}</ion-label>
-      <ion-input formControlName="binE" type="text" [(ngModel)]="binE" name="binE"></ion-input>
+      <ion-input formControlName="binE" type="number" [(ngModel)]="binE" name="binE"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label stacked [MathJax]="text7" style="text-align: justify;">{{ text7 }}</ion-label>
-      <ion-input formControlName="binx" type="text" [(ngModel)]="binx" name="binx"></ion-input>
+      <ion-input formControlName="binx" type="number" [(ngModel)]="binx" name="binx"></ion-input>
     </ion-item>
 
     
@@ -62,7 +62,7 @@
   </ion-card-content>
 
   <p style="text-align: center; color: grey;"><small>&copy; 2017 | Universidad de Playa Ancha de Ciencias de la Educación</small></p>
-
+  <img src="assets/imgs/Lab[e]saM.png">
 </ion-content>
 
 

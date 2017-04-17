@@ -27,7 +27,7 @@ export class BinomialPage {
     this.prueba = formBuilder.group({
       binp: ['', Validators.compose([Validators.required])],
       binx: ['', Validators.compose([Validators.required])],
-      binn: ['', Validators.compose([Validators.required])]
+      binn: ['', Validators.compose([Validators.required])],
     });
     //this.formulae="`sum_(i=1)^n i^3=((n(n+1))/2)^2`";
     var text1 = "<p>La distribución Binomial es una generalización de la distribución Bernoulli a $n$ eventos dicotómicos.</p>";
@@ -42,32 +42,39 @@ export class BinomialPage {
     this.def_text = text1 + text2 + text21 + text22 + text23;
 
     this.text3 = "<p>$p$: Prob. de éxito, valor entre $0$ y $1$, ambos incluidos.</p>";
-    this.text4 = "<p>$n$: Tamaño de la muestra.</p>";
-    this.text5 = "<p>$x$: Número de éxitos esperados.</p>";
+    this.text4 = "<p>$n$: Tamaño de la muestra (número entero).</p>";
+    this.text5 = "<p>$x$: Número de éxitos esperados (número entero).</p>";
     this.par_text = this.text3 + this.text4 + this.text5;
   }
 
   binomialCalc(){
 
     var p = Number(this.prueba.value.binp);
-    var x = Number(this.prueba.value.binx);
     var n = Number(this.prueba.value.binn);
+    var x = Number(this.prueba.value.binx);
 
-    if((n>=0) && !math.isNaN(x) && !math.isNaN(p) && Number.isInteger(x) && Number.isInteger(n) && p >= 0 && p <= 1){
-      var binomial = (stat.factorial(n)/(stat.factorial(x)*stat.factorial(n - x)))*Math.pow(p,x)*Math.pow(1-p,n-x);
+    if((n>=0) && !math.isNaN(x) && !math.isNaN(p) && p >= 0 && p <= 1){
+      var binomial = (stat.factorial(n) / (stat.factorial(x) * stat.factorial(n - x))) * Math.pow(p,x) * Math.pow(1-p,n-x);
       var suma: Array<Number> = [];
-
       for(var i = 0; i <= parseInt(x.toString()); i = i+1){
         var flag = (stat.factorial(n)/(stat.factorial(i)*stat.factorial(n - i)))*Math.pow(p,i)*Math.pow(1-p,n-i);
         suma.push(flag);
       }
 
       var EX = n * p;
-      var VX = n * p * (1-p);
+      var VX = n * p * (1 - p);
 
-      if(binomial >= 0){
+      if(binomial >= 0 && n>=0 && p >= 0 && x >= 0 && p <= 1 && x <= n){
         this.visible = true;
         this.res_text = "<p>$p(X= " + x + ")=" + binomial.toFixed(3) + "$</p><p>$p(X\\leq" + x + ")=" + (stat.sumSimple(suma)).toFixed(3) + "$</p><p>$E(X)=" + EX.toFixed(3) + "$</p><p>$V(X)="+ VX.toFixed(3) + "$</p>";
+      }else{
+        this.visible = false;
+        let alert = this.alertCtrl.create({
+          title: "Error de Cálculo",
+          message: 'Revise los parámetros',
+          buttons: ['OK']
+        });
+        alert.present();
       }
     }else{
       this.visible = false;
@@ -78,7 +85,6 @@ export class BinomialPage {
       });
       alert.present();
     }
-
   }
 
   reset(){

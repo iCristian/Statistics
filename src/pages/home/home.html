@@ -21,82 +21,135 @@
   <ion-grid>
     <ion-row>
       <ion-col>
-        <ion-card (click)="bernoulli()">
+
+        <ion-card>
+          <ion-row>
+            <ion-col>
+              <ion-fab top right>
+                <button ion-fab mini color="home-naranjo" (click)="bernoulli()"><ion-icon name="arrow-round-forward"></ion-icon></button>
+              </ion-fab>
+            </ion-col>
+          </ion-row>
           <img src="assets/imgs/bernoulli.jpg">
-          <ion-item-group>
+          <ion-item-group (click)="bernoulli()">
             <ion-item class="card-title" color="home-cardTitle">
               <h2>Distribución de Bernoulli</h2>
               <p text-wrap>Generalización de la distribución de Bernoulli para n evenetos dicotómicos.</p>
             </ion-item>
           </ion-item-group>
         </ion-card>
-      </ion-col>
+
+    </ion-col>
   </ion-row>
   <ion-row>
       <ion-col>
-        <ion-card (click)="binomial()">
+
+        <ion-card>
+          <ion-row>
+            <ion-col>
+              <ion-fab top right>
+                <button ion-fab mini color="home-naranjo" (click)="binomial()"><ion-icon name="arrow-round-forward"></ion-icon></button>
+              </ion-fab>
+            </ion-col>
+          </ion-row>
           <img src="assets/imgs/binomial.png">
-          <ion-item-group>
+          <ion-item-group (click)="binomial()">
             <ion-item class="card-title" color="home-cardTitle">
               <h2>Distribución Binomial</h2>
               <p text-wrap>Modelo de probabilidad para una variable discreta de característica dicotómica.</p>
             </ion-item>
           </ion-item-group>
         </ion-card>
+
       </ion-col>
   </ion-row>
   <ion-row>
       <ion-col>
-        <ion-card (click)="poisson()">
+
+        <ion-card>
+          <ion-row>
+            <ion-col>
+              <ion-fab top right>
+                <button ion-fab mini color="home-naranjo" (click)="poisson()"><ion-icon name="arrow-round-forward"></ion-icon></button>
+              </ion-fab>
+            </ion-col>
+          </ion-row>
           <img src="assets/imgs/poisson.png">
-          <ion-item-group>
+          <ion-item-group (click)="poisson()">
             <ion-item class="card-title" color="home-cardTitle">
               <h2>Distribución Poisson</h2>
               <p text-wrap>Se suele utilizar cuando el nº de repeticiones "n" es discreta y muy grande.</p>
             </ion-item>
           </ion-item-group>
         </ion-card>
+
       </ion-col>
   </ion-row>
   <ion-row>
       <ion-col>
-        <ion-card (click)="hipergeometrica()">
+
+        <ion-card>
+          <ion-row>
+            <ion-col>
+              <ion-fab top right>
+                <button ion-fab mini color="home-naranjo" (click)="hipergeometrica()"><ion-icon name="arrow-round-forward"></ion-icon></button>
+              </ion-fab>
+            </ion-col>
+          </ion-row>
           <img src="assets/imgs/hipergeometrica.png">
-          <ion-item-group>
+          <ion-item-group (click)="hipergeometrica()">
             <ion-item class="card-title" color="home-cardTitle">
               <h2>Distribución Hipergeométrica</h2>
               <p text-wrap>Distribución discreta utilizada en la extracción de muestras sin reemplazo.</p>
             </ion-item>
           </ion-item-group>
         </ion-card>
+
       </ion-col>
   </ion-row>
   <ion-row>
       <ion-col>
-        <ion-card (click)="normal()">
+
+        <ion-card>
+          <ion-row>
+            <ion-col>
+              <ion-fab top right>
+                <button ion-fab mini color="home-naranjo" (click)="normal()"><ion-icon name="arrow-round-forward"></ion-icon></button>
+              </ion-fab>
+            </ion-col>
+          </ion-row>
           <img src="assets/imgs/normal.png">
-          <ion-item-group>
+          <ion-item-group (click)="normal()">
             <ion-item class="card-title" color="home-cardTitle">
               <h2>Distribución Normal</h2>
               <p text-wrap>Modelo de probabilidad bajo el cual muchos fenómenos se comportan.</p>
             </ion-item>
           </ion-item-group>
         </ion-card>
+
       </ion-col>
   </ion-row>
   <ion-row>
       <ion-col>
-        <ion-card (click)="exponencial()">
+
+        <ion-card>
+          <ion-row>
+            <ion-col>
+              <ion-fab top right>
+                <button ion-fab mini color="home-naranjo" (click)="exponencial()"><ion-icon name="arrow-round-forward"></ion-icon></button>
+              </ion-fab>
+            </ion-col>
+          </ion-row>
           <img src="assets/imgs/exponencial.png">
-          <ion-item-group>
+          <ion-item-group (click)="exponencial()">
             <ion-item class="card-title" color="home-cardTitle">
               <h2>Distribución Exponencial</h2>
               <p text-wrap>Modelo de probabilidad asociado comunmente a la teoría de colas.</p>
             </ion-item>
           </ion-item-group>
         </ion-card>
-      </ion-col>
-  </ion-row>
 
+      </ion-col>
+    </ion-row>
   </ion-grid>
 </ion-content>

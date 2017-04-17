@@ -1,6 +1,6 @@
 {
-  "name": "Statistics",
-  "app_id": "",
+  "name": "simplEstat",
+  "app_id": "com.cristiancarreno.simplestat",
   "v2": true,
   "typescript": true
 }

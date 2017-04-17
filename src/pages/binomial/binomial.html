@@ -23,7 +23,7 @@
         {{par_text}}
       </ion-card-content>
 
-  <form [formGroup]="prueba" (submit)="binomialCalc()" validate>
+  <form [formGroup]="prueba" (submit)="binomialCalc()" novalidate>
 
     <ion-item item-divider color="home-cardTitle">
         Calcular Distribución Binomial
@@ -31,17 +31,17 @@
 
     <ion-item>
       <ion-label stacked [MathJax]="text3" style="text-align: justify;">{{ text3 }}</ion-label>
-      <ion-input formControlName="binp" type="text" placeholder="Ej. en el lanzamiento de una moneda p = 0.5" [(ngModel)]="binp" name="binp"></ion-input>
+      <ion-input formControlName="binp" type="number" [(ngModel)]="binp" name="binp"></ion-input>
     </ion-item>
     
     <ion-item>
       <ion-label stacked [MathJax]="text4" style="text-align: justify;">{{ text4 }}</ion-label>
-      <ion-input formControlName="binx" type="text" placeholder="Número Entero" [(ngModel)]="binx" name="binx"></ion-input>
+      <ion-input formControlName="binn" type="number" [(ngModel)]="binn" name="binn"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label stacked [MathJax]="text5" style="text-align: justify;">{{ text5 }}</ion-label>
-      <ion-input formControlName="binn" type="text" placeholder="Número de intentos" [(ngModel)]="binn" name="binn"></ion-input>
+      <ion-input formControlName="binx" type="number" [(ngModel)]="binx" name="binx"></ion-input>
     </ion-item>
     
     <ion-grid>
@@ -66,5 +66,5 @@
   </ion-card-content>
 
   <p style="text-align: center; color: grey;"><small>&copy; 2017 | Universidad de Playa Ancha de Ciencias de la Educación</small></p>
-
+  <img src="assets/imgs/Lab[e]saM.png">
 </ion-content>
