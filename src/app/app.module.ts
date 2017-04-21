@@ -12,6 +12,9 @@ import { HipergeometricaPage } from '../pages/hipergeometrica/hipergeometrica';
 import { ExponencialPage } from '../pages/exponencial/exponencial';
 import { NormalPage } from '../pages/normal/normal';
 import { CreditosPage } from '../pages/creditos/creditos';
+import { ChiPage } from '../pages/chi/chi';
+import { WeibullPage } from '../pages/weibull/weibull';
+import { TstudentPage } from '../pages/tstudent/tstudent';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,9 @@ import { CreditosPage } from '../pages/creditos/creditos';
     HipergeometricaPage,
     NormalPage,
     CreditosPage,
+    ChiPage,
+    WeibullPage,
+    TstudentPage,
     MathJaxDirective
   ],
   imports: [
@@ -39,6 +45,9 @@ import { CreditosPage } from '../pages/creditos/creditos';
     HipergeometricaPage,
     NormalPage,
     CreditosPage,
+    ChiPage,
+    WeibullPage,
+    TstudentPage,
     ExponencialPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]

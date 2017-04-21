@@ -151,5 +151,71 @@
 
       </ion-col>
     </ion-row>
+    <ion-row>
+      <ion-col>
+
+        <ion-card>
+          <ion-row>
+            <ion-col>
+              <ion-fab top right>
+                <button ion-fab mini color="home-naranjo" (click)="weibull()"><ion-icon name="arrow-round-forward"></ion-icon></button>
+              </ion-fab>
+            </ion-col>
+          </ion-row>
+          <img src="assets/imgs/weibull.png">
+          <ion-item-group (click)="weibull()">
+            <ion-item class="card-title" color="home-cardTitle">
+              <h2>Distribución Weibull</h2>
+              <p text-wrap>Modelo de probabilidad</p>
+            </ion-item>
+          </ion-item-group>
+        </ion-card>
+
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+
+        <ion-card>
+          <ion-row>
+            <ion-col>
+              <ion-fab top right>
+                <button ion-fab mini color="home-naranjo" (click)="chi()"><ion-icon name="arrow-round-forward"></ion-icon></button>
+              </ion-fab>
+            </ion-col>
+          </ion-row>
+          <img src="assets/imgs/chi.png">
+          <ion-item-group (click)="chi()">
+            <ion-item class="card-title" color="home-cardTitle">
+              <h2>Distribución Chi Cuadrado</h2>
+              <p text-wrap>Modelo de probabilidad</p>
+            </ion-item>
+          </ion-item-group>
+        </ion-card>
+
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+
+        <ion-card>
+          <ion-row>
+            <ion-col>
+              <ion-fab top right>
+                <button ion-fab mini color="home-naranjo" (click)="tstudent()"><ion-icon name="arrow-round-forward"></ion-icon></button>
+              </ion-fab>
+            </ion-col>
+          </ion-row>
+          <img src="assets/imgs/tst.png">
+          <ion-item-group (click)="tstudent()">
+            <ion-item class="card-title" color="home-cardTitle">
+              <h2>Distribución T-Student</h2>
+              <p text-wrap>Modelo de probabilidad</p>
+            </ion-item>
+          </ion-item-group>
+        </ion-card>
+
+      </ion-col>
+    </ion-row>
   </ion-grid>
 </ion-content>
