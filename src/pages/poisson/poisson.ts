@@ -24,18 +24,18 @@ export class PoissonPage {
       binx: ['', Validators.compose([Validators.required])]
     });
     //this.formulae="`sum_(i=1)^n i^3=((n(n+1))/2)^2`";
-    var text1 = "<p>Esta distribución de probabilidad es una de las distribuciones discretas de probabilidad de más utilidad. Al igual que para la distribución binomial, esta se utiliza cuando el analista está interesado en encontrar la probabilidad de que ocurran $x$ éxitos en un proceso de $n$ pruebas, si existe una probabilidad $p$ de éxito en cada prueba.</p><p>La diferencia está en que la distribución de Poisson, se usa cuando el número $n$ de repeticiones del experimento tiende a ser muy grande, y la probabilidad de obtener un éxito en cada prueba tiende a ser muy pequeño.";
-    var text2 = "<p>Sea $\\lambda = np$, entonces:</p>";
-    var text3 = "<p style='text-align: center;'>$p(x)=\\frac{e^{-\\lambda}\\lambda^{x}}{x!}$ con $x=0,1,2 ... , \\lambda > 0$</p>";
-    var text4 = "<p>Para esta distribución se verifica que su esperanza y su varianza son: </p>";
-    var text5 = "<p>$E(X)=\\lambda$</p><p>$V(X)=\\lambda$</p>"
+    var text1 = "<p>La distribución Poisson al igual que la Binomial, es un modelo para variables aleatorias discretas, sin embargo esta se caracteriza por contar ocurrencias del evento de interés por unidad de medida, por ejemplo tiempo, volumen, superficie, etc.</p>";
+    var text2 = "<p>Es uno de los modelos discretos de mayor uso, que puede realizar estimaciones de probabilidad para variables binomiales e hipergeométricas.  El problema de interés es determinar la probabilidad de ocurrencia de x éxitos o elementos con la característica de interés en un determinado tiempo, espacio, volumen, superficie, etc.";
+    var text3 = "<p>En este contexto se dirá que la variable aleatoria de estudio se distribuye Poisson de parámetro $\\lambda$</p>";
+    var text4 = "<p style='text-align: center;'>$X \\sim P_{0}(\\lambda)$</p>";
+    var text5 = "<p>El valor de $\\lambda$ en el modelo Poisson es coincidente con la esperanza y la varianza, por tanto no es una probabilidad y generalmente los problemas serán enunciados en relación a $\\lambda$.</p>"
 
     this.def_text = text1 + text2 + text3 + text4 + text5;
     //`p(X = r) = \binom{n}{r}p^{r}(1-p)^{n-r}`//
     this.text6 = "<p>$\\lambda = np$</p>";
     var text6 = "<p>$\\lambda = np$</p>";
-    this.text7 = "<p>$x$: Prob. de que éxito en $n$ pruebas</p>";
-    var text7 = "<p>$x$: Prob. de que éxito en $n$ pruebas</p>";
+    this.text7 = "<p>$x$: Prob. de éxito en $n$ pruebas</p>";
+    var text7 = "<p>$x$: Prob. de éxito en $n$ pruebas</p>";
 
     this.par_text = text6 + text7;
   }

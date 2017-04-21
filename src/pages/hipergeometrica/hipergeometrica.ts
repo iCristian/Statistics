@@ -27,20 +27,18 @@ export class HipergeometricaPage {
       binN: ['', Validators.compose([Validators.required])],
     });
     //this.formulae="`sum_(i=1)^n i^3=((n(n+1))/2)^2`";
-    var text1 = "<p>La distribución Hipergeométrica determina la probabilidad de encontrar $x$ exitos en una muestra de tamaño $n$, extraída en una muestra sin reemplazo de una población finita de tamaño $N$, en la cual existen $A$ éxitos.</p>";
-    var text2 = "<p>La probabilidad de obtener éxito en cada extraxión es $p$, su función de cuantía viene dada por:</p>";
-    var text3 = "<p style='text-align: center;'>$h(x,n,A,N) = \\frac{\\binom{A}{x}\\binom{N-A}{n-x}}{\\binom{N}{n}}$</p>";
-    var text4 = "<p>Para esta distribución se verifica que su esperanza y su varianza son: </p>";
-    var text5 = "<p>$E(X)=n\\frac{A}{N}$</p><p>$V(X)=\\frac{nA(N-A)(N-n)}{N^{2}(N-1)}$</p>"
+    var text1 = "<p>La distribución Hipergeométrico, es un modelo para variables aleatorias discretas, en un contexto de poblaciones finitas y dicotómicas. Se caracteriza por contar ocurrencias del evento de interés en una muestra de tamaño $n$. Una característica clave de este modelo, es que se conoce cuantas componentes de la población poseen la característica de interés.</p>";
+    var text2 = "<p>El problema de interés es determinar la probabilidad de ocurrencia de $x$ éxitos o elementos con la característica de interés en la muestra seleccionada. En este contexto se dirá que la variable aleatoria de estudio se distribuye Hipergeométrica de parámetro $n$, $k$, $N$.</p>";
+    var text3 = "<p style='text-align: center;'>$X \\sim H(n,k,N)$</p>";
 
-    this.def_text = text1 + text2 + text3 + text4 + text5;
+    this.def_text = text1 + text2 + text3;
     //`p(X = r) = \binom{n}{r}p^{r}(1-p)^{n-r}`//
     this.text6 = "<p>$x$: Nº de éxitos en una muestra de tamaño $n$.</p>";
     var text6 = "<p>$x$: Nº de éxitos en una muestra de tamaño $n$.</p>";
-    this.text7 = "<p>$n$: Nº de la muestra</p>";
-    var text7 = "<p>$n$: Nº de la muestra</p>";
-    this.text8 = "<p>$A$: Número de éxitos conocidos</p>";
-    var text8 = "<p>$A$: Número de éxitos conocidos</p>";
+    this.text7 = "<p>$n$: Tamaño de la muestra</p>";
+    var text7 = "<p>$n$: Tamaño de la muestra</p>";
+    this.text8 = "<p>$k$: Número de éxitos conocidos</p>";
+    var text8 = "<p>$k$: Número de éxitos conocidos</p>";
     this.text9 = "<p>$N$: Nº de la población</p>";
     var text9 = "<p>$N$: Nº de la población</p>";
 
