@@ -31,19 +31,19 @@
 
     <ion-item>
       <ion-label stacked [MathJax]="text6" style="text-align: justify;">{{ text6 }}</ion-label>
-      <ion-input formControlName="binlambda" type="text" [(ngModel)]="binlambda" name="binlambda"></ion-input>
+      <ion-input formControlName="binlambda" [disabled]="buttonDisabled" type="text" [(ngModel)]="binlambda" name="binlambda"></ion-input>
     </ion-item>
     
     <ion-item>
       <ion-label stacked [MathJax]="text7" style="text-align: justify;">{{ text7 }}</ion-label>
-      <ion-input formControlName="binx" type="text" [(ngModel)]="binx" name="binx"></ion-input>
+      <ion-input formControlName="binx" [disabled]="buttonDisabled" type="text" [(ngModel)]="binx" name="binx"></ion-input>
     </ion-item>
 
     
     <ion-grid>
       <ion-row>
         <ion-col>
-          <button ion-button full type="submit" color="home-navbar">Calcular</button>
+          <button ion-button full type="submit" [disabled]="buttonDisabled" color="home-navbar">Calcular</button>
         </ion-col>
         <ion-col>
           <button ion-button full color="danger" type="reset" (click)="reset()" color="home-naranjo">Borrar</button>

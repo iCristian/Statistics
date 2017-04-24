@@ -13,7 +13,6 @@ import { ExponencialPage } from '../pages/exponencial/exponencial';
 import { NormalPage } from '../pages/normal/normal';
 import { CreditosPage } from '../pages/creditos/creditos';
 import { ChiPage } from '../pages/chi/chi';
-import { WeibullPage } from '../pages/weibull/weibull';
 import { TstudentPage } from '../pages/tstudent/tstudent';
 
 @NgModule({
@@ -28,7 +27,6 @@ import { TstudentPage } from '../pages/tstudent/tstudent';
     NormalPage,
     CreditosPage,
     ChiPage,
-    WeibullPage,
     TstudentPage,
     MathJaxDirective
   ],
@@ -46,7 +44,6 @@ import { TstudentPage } from '../pages/tstudent/tstudent';
     NormalPage,
     CreditosPage,
     ChiPage,
-    WeibullPage,
     TstudentPage,
     ExponencialPage
   ],

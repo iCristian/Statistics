@@ -29,12 +29,12 @@
   <form [formGroup]="prueba" (submit)="bernoulliCalc()" novalidate>
     <ion-item>
       <ion-label stacked>Probabilidad de Éxito</ion-label>
-      <ion-input formControlName="p" type="number" inputmode="numeric" pattern="\d*" placeholder="Valor entre 0 y 1 inclusive" [(ngModel)]="p" name="p"></ion-input>
+      <ion-input formControlName="p" type="number" [disabled]="buttonDisabled" inputmode="numeric" pattern="\d*" placeholder="Valor entre 0 y 1 inclusive" [(ngModel)]="p" name="p"></ion-input>
     </ion-item>
     <ion-grid>
       <ion-row>
         <ion-col>
-          <button ion-button full type="submit" color="home-navbar">Calcular</button>
+          <button ion-button full type="submit" [disabled]="buttonDisabled" color="home-navbar">Calcular</button>
         </ion-col>
         <ion-col>
           <button ion-button full type="reset" (click)="reset()" color="home-naranjo">Borrar</button>

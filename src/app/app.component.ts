@@ -10,7 +10,6 @@ import { HipergeometricaPage } from '../pages/hipergeometrica/hipergeometrica';
 import { ExponencialPage } from '../pages/exponencial/exponencial';
 import { NormalPage } from '../pages/normal/normal';
 import { ChiPage } from '../pages/chi/chi';
-import { WeibullPage } from '../pages/weibull/weibull';
 import { TstudentPage } from '../pages/tstudent/tstudent';
 
 
@@ -43,7 +42,6 @@ export class MyApp {
 
     this.pagesContinuas = [
       { title: 'Normal', component: NormalPage},
-      { title: 'Weibull', component: WeibullPage},
       { title: 'Exponencial', component: ExponencialPage},
       { title: 'Chi Cuadrado', component: ChiPage},
       { title: 'T-Student', component: TstudentPage}

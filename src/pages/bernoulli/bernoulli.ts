@@ -17,6 +17,7 @@ export class Bernoulli {
   public par_text: String;
   public res_text: String;
   public visible: Boolean;
+  public buttonDisabled = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder, public alertCtrl: AlertController) {
     this.prueba = formBuilder.group({
@@ -43,11 +44,13 @@ export class Bernoulli {
     }else{
       this.visible = true;
       this.res_text = "<p>$p: " + parseFloat(this.bernoulli[1]).toFixed(3) + "$</p><p>$q: " +  parseFloat(this.bernoulli[0]).toFixed(3) + "$</p>";
+      this.buttonDisabled = true;
     }
   }
 
   reset(){
     this.prueba.reset();
+    this.buttonDisabled = false;
     this.visible = false;
     this.res_text = null;
   }

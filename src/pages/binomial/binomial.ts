@@ -22,6 +22,7 @@ export class BinomialPage {
   public text3 = "";
   public text4 = "";
   public text5 = "";
+  public buttonDisabled = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder, public alertCtrl: AlertController) {
     this.prueba = formBuilder.group({
@@ -67,6 +68,7 @@ export class BinomialPage {
       if(binomial >= 0 && n>=0 && p >= 0 && x >= 0 && p <= 1 && x <= n){
         this.visible = true;
         this.res_text = "<p>$p(X= " + x + ")=" + binomial.toFixed(3) + "$</p><p>$p(X\\leq" + x + ")=" + (stat.sumSimple(suma)).toFixed(3) + "$</p><p>$E(X)=" + EX.toFixed(3) + "$</p><p>$V(X)="+ VX.toFixed(3) + "$</p>";
+        this.buttonDisabled = true;
       }else{
         this.visible = false;
         let alert = this.alertCtrl.create({
@@ -89,6 +91,7 @@ export class BinomialPage {
 
   reset(){
     this.prueba.reset();
+    this.buttonDisabled = false;
     this.visible = false;
     this.res_text = null;
   }

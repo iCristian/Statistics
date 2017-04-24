@@ -17,6 +17,7 @@ export class PoissonPage {
   public res_text: String;
   public text6: String;
   public text7: String;
+  public buttonDisabled = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder, public alertCtrl: AlertController) {
     this.prueba = formBuilder.group({
@@ -56,6 +57,7 @@ export class PoissonPage {
       if(poisson >= 0){
         this.visible = true;
         this.res_text = "<p>$p(X= " + x + ")=" + poisson.toFixed(3) + "$</p><p>$p(X\\leq" + x + ")=" + (stat.sumSimple(suma)).toFixed(3) + "$</p><p>$E(X)=" + lambda.toFixed(3) + "$</p><p>$V(X)="+ lambda.toFixed(3) + "$</p>";
+        this.buttonDisabled = true;
       }
     }else{
       this.visible = false;
@@ -71,6 +73,7 @@ export class PoissonPage {
 
   reset(){
     this.prueba.reset();
+    this.buttonDisabled = false;
     this.visible = false;
     this.res_text = null;
   }

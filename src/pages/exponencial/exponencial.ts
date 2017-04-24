@@ -17,6 +17,7 @@ export class ExponencialPage {
   public res_text: String;
   public text6: String;
   public text7: String;
+  public buttonDisabled = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder, public alertCtrl: AlertController) {
     this.prueba = formBuilder.group({
@@ -54,6 +55,7 @@ export class ExponencialPage {
       if(exponencial>=0){
         this.visible = true;
         this.res_text = "<p>$\\lambda = " + lambda.toFixed(3) + "$</p><p>$P(X \\leqslant " + x + ")=" + exponencial.toFixed(3) + "$</p>";
+        this.buttonDisabled = true;
       }else{
         this.visible = false;
         let alert = this.alertCtrl.create({
@@ -77,6 +79,7 @@ export class ExponencialPage {
 
   reset(){
     this.prueba.reset();
+    this.buttonDisabled = false;
     this.visible = false;
     this.res_text = null;
   }

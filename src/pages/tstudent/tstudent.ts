@@ -17,6 +17,7 @@ export class TstudentPage {
   public res_text: String;
   public text3 = "";
   public text4 = "";
+  public buttonDisabled = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder, public alertCtrl: AlertController) {
     this.prueba = formBuilder.group({
@@ -44,6 +45,7 @@ export class TstudentPage {
       if(!math.isNaN(t)){
         this.visible = true;
         this.res_text = "<p>$p(X\\leq" + x + ")=" + t.toFixed(3) + "$</p>";
+        this.buttonDisabled = true;
       }else{
         this.visible = false;
         let alert = this.alertCtrl.create({
@@ -66,6 +68,7 @@ export class TstudentPage {
 
   reset(){
     this.prueba.reset();
+    this.buttonDisabled = false;
     this.visible = false;
     this.res_text = null;
   }

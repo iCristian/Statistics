@@ -31,23 +31,23 @@
 
     <ion-item>
       <ion-label stacked [MathJax]="text3" style="text-align: justify;">{{ text3 }}</ion-label>
-      <ion-input formControlName="binp" type="number" [(ngModel)]="binp" name="binp"></ion-input>
+      <ion-input formControlName="binp" [disabled]="buttonDisabled" type="number" [(ngModel)]="binp" name="binp"></ion-input>
     </ion-item>
     
     <ion-item>
       <ion-label stacked [MathJax]="text4" style="text-align: justify;">{{ text4 }}</ion-label>
-      <ion-input formControlName="binn" type="number" [(ngModel)]="binn" name="binn"></ion-input>
+      <ion-input formControlName="binn" [disabled]="buttonDisabled" type="number" [(ngModel)]="binn" name="binn"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label stacked [MathJax]="text5" style="text-align: justify;">{{ text5 }}</ion-label>
-      <ion-input formControlName="binx" type="number" [(ngModel)]="binx" name="binx"></ion-input>
+      <ion-input formControlName="binx" [disabled]="buttonDisabled" type="number" [(ngModel)]="binx" name="binx"></ion-input>
     </ion-item>
     
     <ion-grid>
       <ion-row>
         <ion-col>
-          <button ion-button full type="submit" color="home-navbar">Calcular</button>
+          <button ion-button full type="submit" [disabled]="buttonDisabled" color="home-navbar">Calcular</button>
         </ion-col>
         <ion-col>
           <button ion-button full color="danger" (click)="reset()" type="reset" color="home-naranjo">Borrar</button>

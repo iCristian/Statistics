@@ -18,6 +18,7 @@ export class NormalPage {
   public text6: String;
   public text7: String;
   public text8: String;
+  public buttonDisabled = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder, public alertCtrl: AlertController) {
     this.prueba = formBuilder.group({
@@ -54,22 +55,30 @@ export class NormalPage {
     var x = Number(this.prueba.value.x);
 
     if(!math.isNaN(media) && !math.isNaN(desvest) && !math.isNaN(x)){
-
-      var z = (x - media)/desvest;
-      //var normal = (1/Math.sqrt(2 * Math.PI)) * Math.E(-((z^2)/2));
-      var normal = stat.cumulativeStdNormalProbability(z);
-      
-      if(z && normal){
+      if(media == x){
         this.visible = true;
-        this.res_text = "<p>$Z=" + z.toFixed(3) + "$</p><p>$P(X \\leq x) = \\phi(Z = " + z.toFixed(3) + ") =" + normal.toFixed(3) + "$</p>";
+        this.res_text = "<p>$Z=0$</p><p>$P(X \\leq x) = \\phi(Z = 0) = 0.5$</p>";
+        this.buttonDisabled = true;
       }else{
-        this.visible = false;
-        let alert = this.alertCtrl.create({
-          title: "Error de Cálculo",
-          message: 'Verifique que los parametrós ingresados sean coherentes para realizar el cálculo',
-          buttons: ['OK']
-        });
-        alert.present();
+        var z = (x - media)/desvest;
+        //var normal = (1/Math.sqrt(2 * Math.PI)) * Math.E(-((z^2)/2));
+        var normal = stat.cumulativeStdNormalProbability(z);
+        
+        if(z && normal){
+          this.visible = true;
+          this.res_text = "<p>$Z=" + z.toFixed(3) + "$</p><p>$P(X \\leq x) = \\phi(Z = " + z.toFixed(3) + ") =" + normal.toFixed(3) + "$</p>";
+          this.buttonDisabled = true;
+        }else{
+          this.visible = false;
+          this.buttonDisabled = true;
+          let alert = this.alertCtrl.create({
+            title: "Error de Cálculo",
+            message: 'Verifique que los parametrós ingresados sean coherentes para realizar el cálculo',
+            buttons: ['OK']
+          });
+          alert.present();
+        }
+        
       }
 
     }else{
@@ -85,6 +94,7 @@ export class NormalPage {
 
   reset(){
     this.prueba.reset();
+    this.buttonDisabled = false;
     this.visible = false;
     this.res_text = null;
   }

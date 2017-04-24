@@ -31,23 +31,23 @@
 
     <ion-item>
       <ion-label stacked [MathJax]="text6" style="text-align: justify;">{{ text6 }}</ion-label>
-      <ion-input formControlName="media" type="number" [(ngModel)]="media" name="media"></ion-input>
+      <ion-input formControlName="media" [disabled]="buttonDisabled" type="number" [(ngModel)]="media" name="media"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label stacked [MathJax]="text7" style="text-align: justify;">{{ text7 }}</ion-label>
-      <ion-input formControlName="desvest" type="number" [(ngModel)]="desvest" name="desvest"></ion-input>
+      <ion-input formControlName="desvest" [disabled]="buttonDisabled" type="number" [(ngModel)]="desvest" name="desvest"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label stacked [MathJax]="text8" style="text-align: justify;">{{ text8 }}</ion-label>
-      <ion-input formControlName="x" type="number" [(ngModel)]="x" name="x"></ion-input>
+      <ion-input formControlName="x"  [disabled]="buttonDisabled" type="number" [(ngModel)]="x" name="x"></ion-input>
     </ion-item>
     
     <ion-grid>
       <ion-row>
         <ion-col>
-          <button ion-button full type="submit" color="home-navbar">Calcular</button>
+          <button ion-button full type="submit" [disabled]="buttonDisabled" color="home-navbar">Calcular</button>
         </ion-col>
         <ion-col>
           <button ion-button full color="danger" type="reset" (click)="reset()" color="home-naranjo">Borrar</button>

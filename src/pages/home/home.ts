@@ -8,7 +8,6 @@ import { HipergeometricaPage } from '../hipergeometrica/hipergeometrica';
 import { ExponencialPage } from '../exponencial/exponencial';
 import { NormalPage } from '../normal/normal';
 import { CreditosPage } from '../creditos/creditos';
-import { WeibullPage } from '../weibull/weibull';
 import { ChiPage } from '../chi/chi';
 import { TstudentPage } from '../tstudent/tstudent';
 
@@ -49,10 +48,6 @@ export class Home {
 
   creditos(){
     this.navCtrl.push(CreditosPage);
-  }
-
-  weibull(){
-    this.navCtrl.push(WeibullPage);
   }
 
   chi(){

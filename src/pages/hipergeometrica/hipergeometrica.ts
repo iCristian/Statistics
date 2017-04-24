@@ -18,6 +18,7 @@ export class HipergeometricaPage {
   public text7: String;
   public text8: String;
   public text9: String;
+  public buttonDisabled = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder, public alertCtrl: AlertController) {
     this.prueba = formBuilder.group({
@@ -63,6 +64,7 @@ export class HipergeometricaPage {
       if(hipergeometrica>=0){
         this.visible = true;
         this.res_text = "<p>$p(X= " + x + ")=" + hipergeometrica.toFixed(3) + "$</p><p>$p(X\\leq" + x + ")=" + (stat.sumSimple(suma)).toFixed(3) + "$</p>";
+        this.buttonDisabled = true;
       }
     }else{
       this.visible = false;
@@ -78,6 +80,7 @@ export class HipergeometricaPage {
 
   reset(){
     this.prueba.reset();
+    this.buttonDisabled = false;
     this.visible = false;
     this.res_text = null;
   }
