@@ -34,8 +34,8 @@ export class HipergeometricaPage {
 
     this.def_text = text1 + text2 + text3;
     //`p(X = r) = \binom{n}{r}p^{r}(1-p)^{n-r}`//
-    this.text6 = "<p>$x$: Nº de éxitos en una muestra de tamaño $n$.</p>";
-    var text6 = "<p>$x$: Nº de éxitos en una muestra de tamaño $n$.</p>";
+    this.text6 = "<p>$x$: Nº de éxitos esperados en una muestra de tamaño $n$.</p>";
+    var text6 = "<p>$x$: Nº de éxitos esperados en una muestra de tamaño $n$.</p>";
     this.text7 = "<p>$n$: Tamaño de la muestra</p>";
     var text7 = "<p>$n$: Tamaño de la muestra</p>";
     this.text8 = "<p>$k$: Número de éxitos conocidos</p>";

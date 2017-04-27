@@ -35,8 +35,8 @@ export class PoissonPage {
     //`p(X = r) = \binom{n}{r}p^{r}(1-p)^{n-r}`//
     this.text6 = "<p>$\\lambda = np$</p>";
     var text6 = "<p>$\\lambda = np$</p>";
-    this.text7 = "<p>$x$: Prob. de éxito en $n$ pruebas</p>";
-    var text7 = "<p>$x$: Prob. de éxito en $n$ pruebas</p>";
+    this.text7 = "<p>$x$: Numero de éxitos por unidad de análisis.</p>";
+    var text7 = "<p>$x$: Numero de éxitos por unidad de análisis.</p>";
 
     this.par_text = text6 + text7;
   }
