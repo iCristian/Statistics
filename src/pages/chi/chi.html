@@ -28,15 +28,15 @@
     <ion-item item-divider color="home-cardTitle">
         Calcular Distr. Chi Cuadrado
     </ion-item>
-
-    <ion-item>
-      <ion-label stacked [MathJax]="text3" style="text-align: justify;">{{ text3 }}</ion-label>
-      <ion-input formControlName="binx" [disabled]="buttonDisabled" type="number" [(ngModel)]="binx" name="binx"></ion-input>
-    </ion-item>
     
     <ion-item>
       <ion-label stacked [MathJax]="text4" style="text-align: justify;">{{ text4 }}</ion-label>
       <ion-input formControlName="bindof" [disabled]="buttonDisabled" type="number" [(ngModel)]="bindof" name="bindof"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked [MathJax]="text3" style="text-align: justify;">{{ text3 }}</ion-label>
+      <ion-input formControlName="binx" [disabled]="buttonDisabled" type="number" [(ngModel)]="binx" name="binx"></ion-input>
     </ion-item>
     
     <ion-grid>

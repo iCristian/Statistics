@@ -24,12 +24,12 @@ export class ChiPage {
       binx: ['', Validators.compose([Validators.required])],
       bindof: ['', Validators.compose([Validators.required])],
     });
-    var text1 = "<p>Es una distribución de variables aleatorias continuas, con soporte positivo. Su función de densidad presenta un comportamiento asimétrico positivo. Puede ser generada a partir de una variable aleatoria normal estándar. Para la determinación de probabilidades es necesario de la especificación del tamaño muestral o los grados de libertad ($\\mu$).</p>";
+    var text1 = "<p>Es una distribución de variables aleatorias continuas, con soporte positivo. Su función de densidad presenta un comportamiento asimétrico positivo. Puede ser generada a partir de una variable aleatoria normal estándar. Para la determinación de probabilidades es necesario de la especificación del tamaño muestral o los grados de libertad ($\\nu$).</p>";
     this.def_text = text1;
 
     this.text3 = "<p>$x$</p>";
-    this.text4 = "<p>$\\mu$: Grados de Libertad</p>";
-    this.par_text = this.text3 + this.text4;
+    this.text4 = "<p>$\\nu$: Grados de Libertad</p>";
+    this.par_text = this.text4 + this.text3;
   }
 
 

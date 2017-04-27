@@ -43,7 +43,7 @@ export class HipergeometricaPage {
     this.text9 = "<p>$N$: Nº de la población</p>";
     var text9 = "<p>$N$: Nº de la población</p>";
 
-    this.par_text = text6 + text7 + text8 + text9;
+    this.par_text = text7 + text8 + text9 + text6;
   }
 
   hipergeometricaCalc(){

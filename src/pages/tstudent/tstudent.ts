@@ -24,12 +24,12 @@ export class TstudentPage {
       binx: ['', Validators.compose([Validators.required])],
       bindof: ['', Validators.compose([Validators.required])],
     });
-    var text1 = "<p>Es una distribución para variables aleatorias Continuas, con soporte real. Gráficamente es similar a la campana de Gauss o modelo normal, sin embargo su diferencia recae en el peso de sus colas, se dice distribución de colas pesadas, en el sentido de acumular mayor probabilidad, que la normal, en estas. Para la determinación de probabilidades es necesario de la especificación del tamaño muestral o los grados de libertad ($\\mu$).</p>";
+    var text1 = "<p>Es una distribución para variables aleatorias Continuas, con soporte real. Gráficamente es similar a la campana de Gauss o modelo normal, sin embargo su diferencia recae en el peso de sus colas, se dice distribución de colas pesadas, en el sentido de acumular mayor probabilidad, que la normal, en estas. Para la determinación de probabilidades es necesario de la especificación del tamaño muestral o los grados de libertad ($\\nu$).</p>";
     this.def_text = text1;
 
     this.text3 = "<p>$x$</p>";
-    this.text4 = "<p>$\\mu$: Grados de Libertad</p>";
-    this.par_text = this.text3 + this.text4;
+    this.text4 = "<p>$\\nu$: Grados de Libertad</p>";
+    this.par_text = this.text4 + this.text3;
   }
 
 
