@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
-import { Bernoulli } from '../bernoulli/bernoulli';
+
+import { BernoulliPage } from '../bernoulli/bernoulli';
 import { BinomialPage } from '../binomial/binomial';
-import { PoissonPage } from '../poisson/poisson';
-import { HipergeometricaPage } from '../hipergeometrica/hipergeometrica';
-import { ExponencialPage } from '../exponencial/exponencial';
-import { NormalPage } from '../normal/normal';
-import { CreditosPage } from '../creditos/creditos';
 import { ChiPage } from '../chi/chi';
+import { ExponencialPage } from '../exponencial/exponencial';
+import { HipergeometricaPage } from '../hipergeometrica/hipergeometrica';
+import { NormalPage } from '../normal/normal';
+import { PoissonPage } from '../poisson/poisson';
 import { TstudentPage } from '../tstudent/tstudent';
 
 @Component({
@@ -23,7 +23,7 @@ export class Home {
 
 
   bernoulli(){
-    this.navCtrl.push(Bernoulli);
+    this.navCtrl.push(BernoulliPage);
   }
 
   binomial(){
@@ -47,7 +47,7 @@ export class Home {
   }
 
   creditos(){
-    this.navCtrl.push(CreditosPage);
+    this.navCtrl.push('CreditosPage');
   }
 
   chi(){

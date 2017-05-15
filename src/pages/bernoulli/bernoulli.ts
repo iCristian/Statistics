@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-
 import { NavController, NavParams, AlertController } from 'ionic-angular';
 import { FormBuilder, Validators } from '@angular/forms';
+
 import * as stat from "simple-statistics";
 import * as math from "mathjs";
 
@@ -9,7 +9,7 @@ import * as math from "mathjs";
   selector: 'page-bernoulli',
   templateUrl: 'bernoulli.html'
 })
-export class Bernoulli {
+export class BernoulliPage {
   public prueba;
   public bernoulli;
   //public formulae : String ;

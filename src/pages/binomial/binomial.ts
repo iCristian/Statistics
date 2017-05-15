@@ -3,12 +3,8 @@ import { NavController, NavParams, AlertController } from 'ionic-angular';
 import { FormBuilder, Validators } from '@angular/forms';
 import * as stat from "simple-statistics";
 import * as math from "mathjs";
-/*
-  Generated class for the Binomial page.
 
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
+
 @Component({
   selector: 'page-binomial',
   templateUrl: 'binomial.html'

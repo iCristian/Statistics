@@ -4,7 +4,6 @@ import { FormBuilder, Validators } from '@angular/forms';
 import * as jstat from "jStat";
 import * as math from "mathjs";
 
-
 @Component({
   selector: 'page-tstudent',
   templateUrl: 'tstudent.html'

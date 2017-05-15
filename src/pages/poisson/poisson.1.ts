@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, AlertController } from 'ionic-angular';
 import { FormBuilder, Validators } from '@angular/forms';
-import * as jstat from "jStat";
 import * as stat from "simple-statistics";
 
 @Component({
@@ -47,11 +46,11 @@ export class PoissonPage {
     var x = Number(this.prueba.value.binx);
 
     if(lambda>=0 && !isNaN(x) && x>=0){
-      var poisson = jstat.jStat.poisson.pdf(x, lambda);
+      var poisson = (Math.exp(-1 * lambda) * lambda^(x))/(stat.factorial(x));
       var suma: Array<Number> = [];
 
       for(var i = 0; i <= parseInt(x.toString()); i = i+1){
-        var flag = jstat.jStat.poisson.pdf(i, lambda);
+        var flag = (Math.exp(-1 * lambda) * lambda^(i))/(stat.factorial(i));
         suma.push(flag);
       }
       if(poisson >= 0){

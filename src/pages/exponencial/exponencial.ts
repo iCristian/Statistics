@@ -5,6 +5,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 //import * as stat from "simple-statistics";
 import * as math from "mathjs";
 
+
 @Component({
   selector: 'page-exponencial',
   templateUrl: 'exponencial.html'

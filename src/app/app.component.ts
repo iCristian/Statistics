@@ -1,15 +1,16 @@
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
-import { StatusBar, Splashscreen } from 'ionic-native';
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { Home } from '../pages/home/home';
-import { Bernoulli } from '../pages/bernoulli/bernoulli';
+import { BernoulliPage } from '../pages/bernoulli/bernoulli';
 import { BinomialPage } from '../pages/binomial/binomial';
-import { PoissonPage } from '../pages/poisson/poisson';
-import { HipergeometricaPage } from '../pages/hipergeometrica/hipergeometrica';
-import { ExponencialPage } from '../pages/exponencial/exponencial';
-import { NormalPage } from '../pages/normal/normal';
 import { ChiPage } from '../pages/chi/chi';
+import { ExponencialPage } from '../pages/exponencial/exponencial';
+import { HipergeometricaPage } from '../pages/hipergeometrica/hipergeometrica';
+import { NormalPage } from '../pages/normal/normal';
+import { PoissonPage } from '../pages/poisson/poisson';
 import { TstudentPage } from '../pages/tstudent/tstudent';
 
 
@@ -25,7 +26,7 @@ export class MyApp {
   pagesContinuas: Array<{title: string, component: any}>;
   pagesInicio: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform) {
+  constructor(public platform: Platform, public StatusBar: StatusBar, public SplashScreen: SplashScreen) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
@@ -34,7 +35,7 @@ export class MyApp {
     ];
 
     this.pagesDiscretas = [
-      { title: 'Bernoulli', component: Bernoulli },
+      { title: 'Bernoulli', component: BernoulliPage},
       { title: 'Binomial', component: BinomialPage},
       { title: 'Poisson', component: PoissonPage},
       { title: 'Hipergeométrica', component: HipergeometricaPage}
@@ -53,8 +54,8 @@ export class MyApp {
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
-      StatusBar.styleDefault();
-      Splashscreen.hide();
+      this.StatusBar.styleDefault();
+      this.SplashScreen.hide();
     });
   }
 
