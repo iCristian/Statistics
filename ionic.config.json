@@ -1,5 +1,8 @@
 {
   "name": "simplEstat",
   "app_id": "com.cristiancarreno.simplestat",
-  "type": "ionic-angular"
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
 }
