@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 
-import { NavController } from 'ionic-angular';
 
 import { BernoulliPage } from '../bernoulli/bernoulli';
 import { BinomialPage } from '../binomial/binomial';
@@ -17,8 +16,8 @@ import { TstudentPage } from '../tstudent/tstudent';
 })
 export class Home {
 
-  constructor(public navCtrl: NavController) {
-    
+  constructor() {
+
   }
 
 
@@ -59,3 +58,7 @@ export class Home {
   }
 
 }
+function ViewChild(arg0: string): (target: Home, propertyKey: "nav") => void {
+  throw new Error('Function not implemented.');
+}
+
